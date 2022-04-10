@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Compo from './profile/Compo';
+import cat from './cat.jpg'
 
 function App() {
+  var fullName="chaima sassi";
+  var bio="cat lover";
+  var profession="student";
+
+  const handleName=(name)=>{
+    alert(name);
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Compo fullName={fullName} bio={bio} profession={profession} handleName={handleName} > {cat} </Compo> 
+       
+      
+     
     </div>
   );
 }
